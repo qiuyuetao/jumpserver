@@ -1,0 +1,94 @@
+Start at 2017-08-08 12:28:57.065004
+
+Welcome to Alibaba Cloud Elastic Compute Service !
+
+-bash: /tmp/pass.txt: Permission denied
+{"errcode":40014,"errmsg":"invalid access_token"}Please input Verification Code:yilonghc
+Welcome to Yilong System!
+]0;qiuyuetao@backup:~[?1034h[qiuyuetao@backup ~]$ sudo su [K[K[K[K[K[K[K[Kdf -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        40G   14G   24G  37% /
+tmpfs           3.9G     0  3.9G   0% /dev/shm
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ cat [K[K[K[Kcat /re[K[Ketc/redhat-release 
+CentOS release 6.8 (Final)
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ 
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ hostname
+backup.yilonghc.cn
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ w
+ 12:29:24 up 147 days, 18:41,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU WHAT
+qiuyueta pts/0    59.110.26.187    12:28    0.00s  0.01s  0.00s w
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ lastlog 
+Username         Port     From             Latest
+root             pts/0    203.93.25.8      Tue Aug  8 11:53:46 +0800 2017
+bin                                        **Never logged in**
+daemon                                     **Never logged in**
+adm                                        **Never logged in**
+lp                                         **Never logged in**
+sync                                       **Never logged in**
+shutdown                                   **Never logged in**
+halt                                       **Never logged in**
+mail                                       **Never logged in**
+uucp                                       **Never logged in**
+operator                                   **Never logged in**
+games                                      **Never logged in**
+gopher                                     **Never logged in**
+ftp                                        **Never logged in**
+nobody                                     **Never logged in**
+vcsa                                       **Never logged in**
+saslauth                                   **Never logged in**
+postfix                                    **Never logged in**
+sshd                                       **Never logged in**
+ntp                                        **Never logged in**
+tcpdump                                    **Never logged in**
+nscd                                       **Never logged in**
+dbus                                       **Never logged in**
+mysql                                      **Never logged in**
+www                                        **Never logged in**
+exim                                       **Never logged in**
+guozhiheng       pts/1    59.110.26.187    Tue Aug  8 12:10:04 +0800 2017
+qiuyuetao        pts/0    59.110.26.187    Tue Aug  8 12:28:56 +0800 2017
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ 
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ 
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ 
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ visudo -L
+visudo: invalid option -- 'L'
+usage: visudo [-chqsV] [-f sudoers]
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ 
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ 
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ visudo -L[Kl
+visudo: invalid option -- 'l'
+usage: visudo [-chqsV] [-f sudoers]
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ 
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ 
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ sudo -l
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for qiuyuetao: 
+
+Sorry, try again.
+[sudo] password for qiuyuetao: 
+Sorry, try again.
+[sudo] password for qiuyuetao: 
+Sorry, try again.
+sudo: 3 incorrect password attempts
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ sd[Kudo su -
+[sudo] password for qiuyuetao: 
+Sorry, try again.
+[sudo] password for qiuyuetao: 
+Sorry, try again.
+[sudo] password for qiuyuetao: 
+Sorry, try again.
+sudo: 3 incorrect password attempts
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ 
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ 
+]0;qiuyuetao@backup:~[qiuyuetao@backup ~]$ sudo su -
+[sudo] password for qiuyuetao: 
+Sorry, try again.
+[sudo] password for qiuyuetao: End time is 2017-08-08 12:33:05.167356

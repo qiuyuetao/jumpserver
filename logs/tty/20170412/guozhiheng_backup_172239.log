@@ -1,0 +1,88 @@
+Start at 2017-04-12 17:22:39.597434
+Last login: Fri Apr  7 14:49:15 2017 from 203.93.25.8
+
+Welcome to Alibaba Cloud Elastic Compute Service !
+
+{"errcode":0,"errmsg":"ok"}Please input Verification Code:yilonghc
+Welcome to Yilong System!
+]0;guozhiheng@backup:~[?1034h[guozhiheng@backup ~]$ 
+]0;guozhiheng@backup:~[guozhiheng@backup ~]$ cd[K[Ksudo su -
+[sudo] password for guozhiheng: 
+{"errcode":0,"errmsg":"ok"}Please input Verification Code:yilonghc
+Welcome to Yilong System!
+]0;root@backup:~[?1034h[root@backup ~]# 
+]0;root@backup:~[root@backup ~]# 
+]0;root@backup:~[root@backup ~]# cd /usr/local/nginx/
+]0;root@backup:/usr/local/nginx[root@backup nginx]# ls
+[0m[01;34mclient_body_temp[0m  [01;34mconf[0m  [01;34mfastcgi_temp[0m  [01;34mhtml[0m  [01;34mlogs[0m  [01;34mproxy_temp[0m  [01;34msbin[0m  [01;34mscgi_temp[0m  [01;34muwsgi_temp[0m
+[m]0;root@backup:/usr/local/nginx[root@backup nginx]# cd conf/
+]0;root@backup:/usr/local/nginx/conf[root@backup conf]# ls
+dabr.conf                 fastcgi.conf            nginx.conf.default   typecho.conf
+dedecms.conf              fastcgi.conf.default    none.conf            uwsgi_params
+discuz.conf               fastcgi_params          pathinfo.conf        uwsgi_params.default
+discuzx.conf              fastcgi_params.default  phpwind.conf         [0m[01;34mvhost[0m
+drupal.conf               koi-utf                 proxy-pass-php.conf  win-utf
+ecshop.conf               koi-win                 sablog.conf          wordpress.conf
+enable-php5.2.17.conf     mime.types              scgi_params          wp2.conf
+enable-php.conf           mime.types.default      scgi_params.default
+enable-php-pathinfo.conf  [01;34mnew-2-ssl[0m               shopex.conf
+enable-ssl-example.conf   nginx.conf              typecho2.conf
+[m]0;root@backup:/usr/local/nginx/conf[root@backup conf]# cd vhost/
+]0;root@backup:/usr/local/nginx/conf/vhost[root@backup vhost]# ls
+www.yilonghc.cn.conf
+]0;root@backup:/usr/local/nginx/conf/vhost[root@backup vhost]# cat www.yilonghc.cn.conf 
+server
+    {
+        listen 443 default_server;
+        server_name www.yilonghc.cn yilonghc.cn;
+        
+       if ($http_host ~ "^yilonghc.cn$") {
+          rewrite  ^(.*)    https://www.yilonghc.cn$1 permanent;
+       }
+
+        ssl                  on;
+        ssl_certificate      /usr/local/nginx/conf/new-2-ssl/server.crt;
+        ssl_certificate_key  /usr/local/nginx/conf/new-2-ssl/server.key;
+        ssl_session_timeout 5m;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+        ssl_prefer_server_ciphers on;
+
+        index index.html index.htm index.php;
+        root  /home/webdata/www.yilonghc.cn/public;
+        
+	location / {
+#           return 503;
+	    try_files $uri $uri/ /index.php$is_args$query_string;
+        }
+
+        location ~ [^/]\.php(/|$)
+        {
+#            limit_conn perip 60;
+#            limit_req zone=perreq nodelay;
+            try_files $uri =404;
+            fastcgi_pass  unix:/tmp/php-cgi.sock;
+            fastcgi_index index.php;
+            include fastcgi.conf;
+            fastcgi_param  HTTPS on;
+	    expires      -1;
+        }
+
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+        {
+            expires      30d;
+        }
+
+        location ~ .*\.(js|css)?$
+        {
+            expires      12h;
+        }
+
+        access_log  /home/logs/www.yilonghc.cn/access/www.yilonghc.cn.log;
+
+        location ~ /\.ht {
+          deny all;
+        }
+
+    }
+]0;root@backup:/usr/local/nginx/conf/vhost[root@backup vhost]# End time is 2017-04-12 17:23:54.103449

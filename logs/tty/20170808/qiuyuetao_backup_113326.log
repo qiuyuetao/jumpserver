@@ -1,0 +1,15 @@
+Start at 2017-08-08 11:33:26.804942
+You are required to change your password immediately (password aged)
+Last login: Fri May 26 11:18:41 2017 from 203.93.25.8
+
+Welcome to Alibaba Cloud Elastic Compute Service !
+
+WARNING: Your password has expired.
+You must change your password now and login again!
+Changing password for user guozhiheng.
+Changing password for guozhiheng.
+(current) UNIX password: 
+
+
+passwd: Authentication token manipulation error
+End time is 2017-08-08 11:33:52.282243
